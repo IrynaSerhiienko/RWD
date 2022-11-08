@@ -1,0 +1,93 @@
+.header {
+  @extend %flex;
+  @include size-m-w(1440px, 80px);
+  margin-bottom: 70px;
+}
+
+.nav {
+  @extend %flex;
+  @include size-m-w(1240px, 46px);
+  margin: 17px 120px;
+  width: 100%;
+}
+
+.ul {
+  @extend %flex;
+  align-items: center;
+
+  li {
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+.logo-holder {
+  margin-right: 198px;
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.link-holder {
+  margin-right: 20px;
+  transition: transform 0.5s;
+
+  &:hover {
+    color: $blue;
+    text-shadow: 2px 2px 4px $light-grey;
+    transform: scale(1.2);
+  }
+
+  a {
+    @include font-setting("Montserrat", normal, 400, 16px, 28px, $dark);
+  }
+
+  &.first {
+    color: $orange;
+
+    &:hover {
+      text-shadow: 2px 2px 4px $beige;
+    }
+  }
+
+  &.last {
+    margin-right: 200px;
+  }
+}
+
+.btn-holder {
+  @include size(110px, 46px);
+  padding: 13px 22px;
+  border: 1px solid $gray;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.5s;
+
+  &:hover {
+    border: none;
+    box-shadow: 0 0 0 1px $orange, 0 0 10px $shadow;
+    transform: scale(1.2);
+  }
+
+  &.sign-in {
+    background-color: $white;
+    margin-right: 32px;
+  }
+
+  &.sign-up {
+    background-color: $orange;
+    border-color: $orange;
+  }
+
+  a {
+    @include font-setting("Montserrat", normal, 600, 16px, 20px, $dark);
+  }
+}
